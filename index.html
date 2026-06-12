@@ -648,10 +648,35 @@
         });
 
         // Interceptação simples do Formulário de Contato
-        document.getElementById('contactForm').addEventListener('submit', function (e) {
+        document.getElementById('contactForm').addEventListener('submit', async function (e) {
             e.preventDefault();
-            alert('Obrigado pelo contato! Esta mensagem simulada foi processada. Para produção, integre com um endpoint do Cloudflare Workers.');
-            this.reset();
+
+            // Altere para a URL gerada pelo seu Cloudflare Worker
+            const workerUrl = 'https://nbg-form-handler.leo-nobrega.workers.dev';
+
+            const formData = {
+                nome: this.querySelector('input[type="text"]').value,
+                email: this.querySelector('input[type="email"]').value,
+                mensagem: this.querySelector('textarea').value
+            };
+
+            try {
+                const response = await fetch(workerUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+
+                if (response.ok) {
+                    alert('Mensagem enviada com sucesso! A NBG entrará em contato em breve.');
+                    this.reset();
+                } else {
+                    alert('Ocorreu um erro ao enviar. Por favor, tente o botão do WhatsApp.');
+                }
+            } catch (error) {
+                console.error('Erro:', error);
+                alert('Erro de conexão. Tente novamente mais tarde.');
+            }
         });
     </script>
 </body>
