@@ -1,0 +1,3 @@
+Versionamento no git
+Hospedagem no cloudfare
+https://landingpage.leo-nobrega.workers.dev/
