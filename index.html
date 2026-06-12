@@ -49,7 +49,7 @@
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 1.5rem 2rem;
+            padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -406,9 +406,42 @@
 
     <header>
         <nav class="nav-container">
-            <div class="logo">NBG <span
-                    style="font-size: 0.9rem; font-weight: 300; display: block; letter-spacing: 1px;">Cloud &
-                    Data</span></div>
+            <div class="logo-container" style="display: flex; align-items: center; gap: 14px;">
+                <svg width="52" height="52" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    style="filter: drop-shadow(0 2px 10px rgba(6, 182, 212, 0.2));">
+                    <defs>
+                        <linearGradient id="nbg-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#1d4ed8" />
+                            <stop offset="50%" stop-color="#3b82f6" />
+                            <stop offset="100%" stop-color="#06b6d4" />
+                        </linearGradient>
+                    </defs>
+                    <path
+                        d="M40 78 C32 78 26 72 26 64 C26 57 31 51 38 50 C40 40 48 32 58 32 C66 32 73 37 77 44 C81 41 85 40 90 40 C98 40 104 46 104 54 C104 62 98 68 90 68"
+                        stroke="url(#nbg-glow)" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 3"
+                        opacity="0.4" />
+                    <path d="M30 85 L50 45 L70 70 L95 32" stroke="url(#nbg-glow)" stroke-width="7"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M50 62 H88" stroke="url(#nbg-glow)" stroke-width="5" stroke-linecap="round" />
+                    <circle cx="30" cy="85" r="5.5" fill="#1d4ed8" stroke="#0f172a" stroke-width="2" />
+                    <circle cx="50" cy="45" r="5.5" fill="#3b82f6" stroke="#0f172a" stroke-width="2" />
+                    <circle cx="70" cy="70" r="5.5" fill="#06b6d4" stroke="#0f172a" stroke-width="2" />
+                    <circle cx="95" cy="32" r="5.5" fill="#22d3ee" stroke="#0f172a" stroke-width="2" />
+                    <rect x="54" y="38" width="5" height="18" rx="1" fill="#06b6d4" opacity="0.7"
+                        transform="skewX(-10)" />
+                    <rect x="63" y="34" width="5" height="24" rx="1" fill="#3b82f6" opacity="0.8"
+                        transform="skewX(-10)" />
+                    <rect x="72" y="40" width="5" height="15" rx="1" fill="#06b6d4" opacity="0.6"
+                        transform="skewX(-10)" />
+                </svg>
+                <div class="logo-text" style="display: flex; flex-direction: column; line-height: 0.95;">
+                    <span
+                        style="font-size: 1.9rem; font-weight: 800; letter-spacing: 1.5px; font-family: 'Inter', sans-serif; background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">NBG</span>
+                    <span
+                        style="font-size: 0.72rem; font-weight: 600; color: #94a3b8; letter-spacing: 2px; text-transform: uppercase; font-family: 'Inter', sans-serif; margin-top: 3px; white-space: nowrap;">Cloud
+                        & Data Solutions</span>
+                </div>
+            </div>
             <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
